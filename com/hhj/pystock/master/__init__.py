@@ -8,3 +8,4 @@ class boy:
 
 hhj = boy()
 print(hhj.say())
+print(hhj.say())
