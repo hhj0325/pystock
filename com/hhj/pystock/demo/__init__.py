@@ -1,19 +1,9 @@
-def square(x):
-    return x * x
-
-
-def f(a, b=1, c="hehe"):
-    return a + b
+import numpy as np
 
 print("Hello world")
-print(square(9))
-print(f(2))
+print(np.version.full_version)
+a = np.arange(20)
+print(a)
 
-a = 1
-while a < 10:
-    print(a)
-    a = a + 1
-
-b = [1, 2, 3, 4]
-for i in b:
-    print(i)
+a = a.reshape(4, 5)
+print(a)
