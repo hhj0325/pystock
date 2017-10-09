@@ -19,7 +19,7 @@ random.random_sample((3, 3))
 random.ranf((3, 3))
 
 # 产生10个[1,6)之间的浮点型随机数
-5*random.random(10) + 1
+5 * random.random(10) + 1
 random.uniform(1, 6, 10)
 
 # 产生10个[1,6]之间的整型随机数
