@@ -5,12 +5,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 from sklearn.model_selection import cross_val_predict
-from sklearn import datasets
-
-iris = datasets.load_iris()
-digits = datasets.load_digits()
-
-
 
 data = pd.read_csv('d:\pyworkspace\pystock\CCPP\ccpp.csv')
 print(data.head())
@@ -51,24 +45,9 @@ print("MSE:", metrics.mean_squared_error(y, predicted))
 # 用scikit-learn计算RMSE
 print("RMSE:", np.sqrt(metrics.mean_squared_error(y, predicted)))
 
-
 fig, ax = plt.subplots()
 ax.scatter(y, predicted)
 ax.plot([y.min(), y.max()], [y.min(), y.max()], 'k--', lw=4)
 ax.set_xlabel('Measured')
 ax.set_ylabel('Predicted')
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
