@@ -11,6 +11,7 @@ S = [29.72, 30.61, 31.51, 32.13, 32.34, 32.85, 33.56, 34.20, 34.83]
 xdata = np.array(T)
 ydata = np.log(np.array(S))
 
+
 def func(x, a, b):
     return a + b * x
 
