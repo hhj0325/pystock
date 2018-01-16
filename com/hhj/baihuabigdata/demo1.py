@@ -1,9 +1,9 @@
+"""
+page 93
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 
-'''
-page 93
-'''
 x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 y = [0.199, 0.389, 0.580, 0.783, 0.980, 1.177, 1.380, 1.575, 1.771]
 
