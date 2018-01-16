@@ -26,4 +26,4 @@ print(y)
 
 clf = GaussianNB().fit(X, y)
 p = [[1]]
-print (clf.predict(p))
+print(clf.predict(p))
