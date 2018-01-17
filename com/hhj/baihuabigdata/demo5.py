@@ -9,11 +9,13 @@ undergraduate = (3.0/5, 2.0/5)
 master = (4.0/5, 1.0/5)
 date_per = (junior_college, undergraduate, master)
 
+
 def info_date(p):
     info = 0
     for v in p:
         info += v * log(v, 2)
     return info
+
 
 def infoA():
     info = 0
