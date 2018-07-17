@@ -39,7 +39,6 @@ def write_excel():
     sheet1.write_merge(4, 5, 3, 3, '打篮球')
 
     f.add_sheet('年级', cell_overwrite_ok=True)
-
     f.save('D:\\test.xls')
     print('excel done')
 

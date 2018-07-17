@@ -21,17 +21,26 @@ def read_excel():
     cols = sheet1.col_values(3)
     print(rows)
     print(cols)
+
     # 获取表格里的内容，三种方式
+    print('--获取表格里的内容，三种方式--')
     print(sheet1.cell(1, 0).value)
     print(sheet1.cell_value(1, 0))
     print(sheet1.row(1)[0].value)
 
+    print('--日期读取--')
     print(sheet1.cell(1, 2).ctype)
     print(sheet1.cell_value(1, 2))
     date_value = xlrd.xldate_as_tuple(sheet1.cell_value(1, 2), wb.datemode)
     print(date_value)
     print(datetime(*date_value[:3]))
     print(date(*date_value[:3]).strftime('%Y/%m/%d'))
+
+    print('--合并单元格读取--')
+    print(sheet1.merged_cells)
+    print(sheet1.cell_value(1, 3))
+    print(sheet1.cell_value(4, 3))
+    print(sheet1.cell_value(6, 1))
 
 if __name__ == '__main__':
     read_excel()
