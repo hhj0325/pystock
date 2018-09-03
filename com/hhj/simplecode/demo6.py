@@ -19,6 +19,10 @@ def func1():
 
 
 class Student(object):
+    """
+    afasfasdf
+    """
+    __slots__ = ('__name', 'score')
     count = 0
 
     def __init__(self, name, score):
@@ -39,7 +43,7 @@ if __name__ == '__main__':
     print(type(bart))
     print(type(bart) == Student)
     print(dir(bart))
-    print(bart.__dir__())
+    print(bart.__doc__)
     print(Student.count)
 
 
@@ -53,3 +57,37 @@ class MyObject(object):
 
 obj = MyObject()
 hasattr(obj, "x")
+
+
+class Screen(object):
+
+    def __init__(self, width, height):
+        self._width = width
+        self._height = height
+
+    @property
+    def width(self):
+        return self._width
+
+    @property
+    def height(self):
+        return self._height
+
+    @width.setter
+    def width(self, value):
+        self._width = value
+
+    @height.setter
+    def height(self, value):
+        self._height = value
+
+    @property
+    def resolution(self):
+        return self._width * self._height
+
+s = Screen()
+s.width = 1024
+s.height = 768
+print('resolution =', s.resolution)
+
+
