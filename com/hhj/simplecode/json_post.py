@@ -1,5 +1,5 @@
 import requests
-import json
+from datetime import datetime, timedelta
 
 url = 'http://wj2c.jd.com/jingcheck/notifyCallBack'
 
@@ -49,8 +49,15 @@ headers = {'content-type': "application/json"}
 # 也可以直接将data字段换成json字段，2.4.3版本之后支持
 response = requests.post(url, json=body2, headers=headers)
 
+print(datetime.now())
 # 返回信息
 print(response.text)
 
 # 返回响应头
 print(response.status_code)
+
+dt = datetime(2015, 4, 19, 12, 20)
+dt = dt + timedelta(hours=10)
+print(dt)
+print(dt.timestamp())
+
