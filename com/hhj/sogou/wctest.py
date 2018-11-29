@@ -1,4 +1,6 @@
 from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
 import jieba
 
 wc = WordCloud(
@@ -17,5 +19,9 @@ text += ' '.join(jieba.cut(line, cut_all=False))
 
 wc.generate(text)
 # wc.to_file("文章.jpg")(前文词云代码)
+plt.imshow(wc)
+plt.axis('off')
+plt.show()
 wc.to_file("标题.jpg")
+
 print('生成词云成功!')
